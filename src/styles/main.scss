@@ -1,3 +1,11 @@
 @use 'normalize';
 @use 'variables';
 @use 'fonts';
+
+body {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  background-color: variables.$black-color;
+}
+

@@ -1,1 +1,35 @@
-$main-font: "Radiance", "Noto Sans", sans-serif;
+// Шрифт Radiance
+@font-face {
+  font-family: 'Radiance';
+  src: url('../assets/fonts/radiance.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Шрифт Radiance Semi Bold
+@font-face {
+  font-family: 'Radiance';
+  src: url('../assets/fonts/radiance-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Шрифт Reaver Semi Bold
+@font-face {
+  font-family: 'Reaver';
+  src: url('../assets/fonts/Reaver-SemiBold.woff') format('woff');
+  font-weight: 600; // Semi-bold
+  font-style: normal;
+  font-display: swap;
+}
+
+// Шрифт Reaver Bold
+@font-face {
+  font-family: 'Reaver';
+  src: url('../assets/fonts/Reaver-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

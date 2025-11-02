@@ -199,5 +199,43 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Radiance";
+  src: url("../assets/fonts/radiance.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("../assets/fonts/radiance-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("../assets/fonts/Reaver-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Reaver";
+  src: url("../assets/fonts/Reaver-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #000;
+}
 
 /*# sourceMappingURL=main.css.map */
