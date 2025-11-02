@@ -1,10 +1,11 @@
 import Header from "./components/Header/Header.jsx";
+import Video from "./components/BackgroundVid/Video.jsx";
 
 const App = () => {
     return (
         <>
-            <Header/>
-
+            <Header />
+            <Video />
         </>
     )
 }
