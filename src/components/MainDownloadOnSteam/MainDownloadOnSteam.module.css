@@ -1,0 +1,125 @@
+.mainDownload {
+  max-width: 100vw;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: start;
+  animation: mainAnim 4s ease 0s forwards;
+}
+@keyframes mainAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mainDownloadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+  margin-left: 165px;
+}
+.mainDownloadContainer h1 {
+  margin: 0;
+  font-family: "Reaver", serif;
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: rgba(255, 255, 255, 0.9333333333);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 113%;
+  text-shadow: 0px 0px 20px #000;
+}
+.mainDownloadContainer p {
+  font-family: "Radiance", "Noto Sans", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5647058824);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.mainDownloadContainer .mainOrange__line {
+  max-width: 80px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff6046;
+  border-radius: 1px;
+}
+.mainDownloadContainer .mainPlay__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 288px;
+  width: 100%;
+  height: 78px;
+  background: transparent;
+  border-radius: 6px;
+  border: 3px solid rgba(255, 255, 255, 0.5647058824);
+  outline: none;
+  padding: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 5px #000;
+  margin-top: 30px;
+}
+.mainDownloadContainer .mainPlay__button:hover {
+  transform: translateY(-3%);
+  border-color: #ff6046;
+}
+.mainDownloadContainer .mainPlay__button .mainPlay__buttonCont {
+  max-width: 288px;
+  width: 100%;
+  height: 78px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.mainDownloadContainer .mainPlay__button .mainPlay__buttonCont .textColumn {
+  max-width: 206px;
+  width: 100%;
+  height: 49px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.mainDownloadContainer .mainPlay__button .mainPlay__buttonCont .textColumn p {
+  margin: 0;
+  font-family: "Reaver", serif;
+  font-size: 22px;
+  text-shadow: 2px 2px 3px #000;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+.mainDownloadContainer .mainPlay__button .mainPlay__buttonCont .textColumn span {
+  font-family: "Radiance", "Noto Sans", sans-serif;
+  font-size: 15px;
+  text-shadow: 2px 2px 3px #000;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5647058824);
+  text-transform: uppercase;
+}
+.mainDownloadContainer .mainPlay__button .mainPlay__buttonCont .steamIco {
+  max-width: 48px;
+  width: 100%;
+  height: 48px;
+  background-image: url("src/assets/images/steamIco.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*# sourceMappingURL=MainDownloadOnSteam.module.css.map */
