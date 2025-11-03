@@ -1,0 +1,58 @@
+.latestNewsBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.latestNewsBlock .latestNews {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  max-width: 1170px;
+  width: 100%;
+  justify-content: start;
+}
+.latestNewsBlock .latestNews p {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9333333333);
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+.latestNewsBlock .latestNews .viewAll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: transform 0.2s ease;
+}
+.latestNewsBlock .latestNews .viewAll span {
+  text-align: left;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.5647058824);
+  text-transform: uppercase;
+}
+.latestNewsBlock .latestNews .viewAll .arrowRight {
+  max-width: 20px;
+  width: 100%;
+  height: 20px;
+  transform: rotate(200grad);
+  margin-bottom: 2px;
+}
+.latestNewsBlock .latestNews .viewAll:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.latestNewsBlock .newsBlocks {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=LatestNews.module.css.map */

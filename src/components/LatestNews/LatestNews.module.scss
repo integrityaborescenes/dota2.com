@@ -1,0 +1,67 @@
+@use '../../styles/variables';
+
+.latestNewsBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  .latestNews {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    max-width: 1170px;
+    width: 100%;
+    justify-content: start;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      color: variables.$white-color;
+      font-family: variables.$main-font;
+    }
+
+    .viewAll {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      transition: transform 0.2s ease;
+
+      span {
+        text-align: left;
+        font-family: variables.$main-font;
+        font-size: 16px;
+        letter-spacing: 3px;
+        color: variables.$white-color-opacite;
+        text-transform: uppercase;
+      }
+
+      .arrowRight {
+        max-width: 20px;
+        width: 100%;
+        height: 20px;
+        transform: rotate(200grad);
+        margin-bottom: 2px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+
+
+  }
+
+  .newsBlocks {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
