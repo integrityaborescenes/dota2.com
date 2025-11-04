@@ -1,0 +1,47 @@
+@use '../../styles/variables';
+
+.blockWithText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: fromDownToTop 2s ease 0s forwards;
+
+  @keyframes fromDownToTop {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-family: variables.$second-font;
+    font-weight: 700;
+    font-size: 100px;
+    color: variables.$white-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 90%;
+  }
+
+  .pText {
+    max-width: 981px;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-family: variables.$main-font;
+    font-weight: 100;
+    font-size: 26px;
+    color: variables.$white-color-opacite;
+    line-height: 115%;
+  }
+}

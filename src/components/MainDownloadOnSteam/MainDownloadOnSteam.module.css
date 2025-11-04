@@ -48,13 +48,6 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.mainDownloadContainer .mainOrange__line {
-  max-width: 80px;
-  width: 100%;
-  height: 3px;
-  background-color: #ff6046;
-  border-radius: 1px;
-}
 .mainDownloadContainer .mainPlay__button {
   display: flex;
   align-items: center;

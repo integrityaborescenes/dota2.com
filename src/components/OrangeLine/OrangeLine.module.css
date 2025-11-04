@@ -1,0 +1,9 @@
+.mainOrange__line {
+  max-width: 80px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff6046;
+  border-radius: 1px;
+}
+
+/*# sourceMappingURL=OrangeLine.module.css.map */

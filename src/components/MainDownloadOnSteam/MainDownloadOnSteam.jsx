@@ -1,4 +1,5 @@
 import styles from './MainDownloadOnSteam.module.scss'
+import OrangeLine from "../OrangeLine/OrangeLine.jsx";
 
 const MainDownloadOnSteam = () => {
     return (
@@ -6,7 +7,7 @@ const MainDownloadOnSteam = () => {
             <div className={styles.mainDownloadContainer}>
                 <h1>“A Modern Multiplayer <br/> Masterpiece.”</h1>
                 <p>- Destructoid</p>
-                <div className={styles.mainOrange__line}></div>
+                <OrangeLine />
                 <button className={styles.mainPlay__button}>
                     <div className={styles.mainPlay__buttonCont}>
                         <div className={styles.steamIco}></div>

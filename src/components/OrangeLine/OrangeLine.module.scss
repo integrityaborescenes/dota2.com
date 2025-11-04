@@ -1,0 +1,9 @@
+@use '../../styles/variables';
+
+.mainOrange__line {
+  max-width: 80px;
+  width: 100%;
+  height: 3px;
+  background-color: variables.$orange-color;
+  border-radius: 1px;
+}

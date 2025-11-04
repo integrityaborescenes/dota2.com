@@ -8,6 +8,14 @@
   transition: transform 0.3s ease;
   box-shadow: 0px 0px 10px #000;
 }
+.newsBlock .linearGrad {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(19, 23, 28, 0) 60%, rgba(19, 23, 28, 0.733) 70%, rgb(19, 23, 28) 90%);
+}
 .newsBlock .newsBlock__image {
   max-width: 370px;
   width: 100%;
@@ -26,9 +34,10 @@
   bottom: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 3px;
   margin-left: 20px;
   margin-bottom: 10px;
+  transform: translateY(55%);
   transition: transform 0.3s ease;
 }
 .newsBlock .text__container .text h3 {
@@ -42,6 +51,7 @@
   text-shadow: 0px 0px 10px #000;
   color: white;
   line-height: 115%;
+  margin-bottom: 5px;
 }
 .newsBlock .text__container .text span {
   text-align: left;
@@ -54,6 +64,8 @@
 }
 .newsBlock .text__container .text p {
   max-width: 320px;
+  width: 100%;
+  height: 100px;
   text-align: start;
   font-size: 18px;
   opacity: 0;
@@ -62,7 +74,7 @@
   font-family: "Radiance", "Noto Sans", sans-serif;
 }
 .newsBlock:hover .newsBlock__image {
-  filter: brightness(50%) blur(1px);
+  filter: brightness(30%);
 }
 .newsBlock:hover {
   cursor: pointer;
@@ -71,7 +83,7 @@
 }
 .newsBlock:hover .text {
   cursor: pointer;
-  transform: translateY(-20%);
+  transform: translateY(-5%);
 }
 .newsBlock:hover .text p {
   opacity: 1;
