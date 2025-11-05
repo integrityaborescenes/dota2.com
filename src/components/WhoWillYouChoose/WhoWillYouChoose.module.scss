@@ -1,0 +1,35 @@
+@use '../../styles/variables';
+
+.whoWillYouChoose {
+  z-index: 10;
+  transform: translateY(-2%);
+  background: linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 1) 0%,
+                  rgba(0, 0, 0, 0.9) 3%,
+                  rgba(0, 0, 0, 0.8) 6%,
+                  rgba(0, 0, 0, 0.7) 9%,
+                  rgba(0, 0, 0, 0.6) 12%,
+                  rgba(0, 0, 0, 0.5) 15%,
+                  rgba(0, 0, 0, 0.4) 18%,
+                  rgba(0, 0, 0, 0.3) 21%,
+                  rgba(0, 0, 0, 0.2) 24%,
+                  rgba(0, 0, 0, 0.1) 27%,
+                  transparent 100%
+  ), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/images/heroes_fullBackground.jpg");
+
+
+  background-size: 3500px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100%;
+  min-height: 2000px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+
+  .whoWillYouChooseContainer {
+    margin-top: 900px;
+  }
+}
