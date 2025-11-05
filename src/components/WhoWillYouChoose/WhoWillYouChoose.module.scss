@@ -26,10 +26,33 @@
   width: 100%;
   min-height: 2000px;
   display: flex;
-  align-items: start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 
   .whoWillYouChooseContainer {
     margin-top: 900px;
+  }
+
+  .heroSlider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1536px;
+    width: 100%;
+    height: 690px;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+
+    .heroRow {
+      display: flex;
+      align-items: center;
+      min-width: 13770px;
+      height: 138px;
+      position: relative;
+      overflow: hidden;
+    }
+
   }
 }
