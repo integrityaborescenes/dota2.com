@@ -18,6 +18,22 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 90%;
+
+    &.animation {
+      animation: mainAnim 2s ease 0s forwards;
+
+      @keyframes mainAnim {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
   }
 
   .pText {
