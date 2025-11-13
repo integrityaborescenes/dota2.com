@@ -4,6 +4,8 @@ import MainDownloadOnSteam from "./components/MainDownloadOnSteam/MainDownloadOn
 import LatestNews from "./components/LatestNews/LatestNews.jsx";
 import JoinTheBattle from "./components/JoinTheBattleBlock/JoinTheBattle.jsx";
 import WhoWillYouChoose from "./components/WhoWillYouChoose/WhoWillYouChoose.jsx";
+import AtTheEndJoinTheBattle from "./components/AtTheEndJoinTheBattle/AtTheEndJoinTheBattle.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
     return (
@@ -14,6 +16,8 @@ const App = () => {
             <LatestNews />
             <JoinTheBattle />
             <WhoWillYouChoose />
+            <AtTheEndJoinTheBattle />
+            <Footer />
         </>
     )
 }

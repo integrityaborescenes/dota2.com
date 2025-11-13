@@ -1,0 +1,31 @@
+.atTheEndJoinTheBattle {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  max-width: 100%;
+  margin: 100px 0 40px 0;
+  width: 100%;
+  height: 433px;
+  background-image: url("/src/assets/images/backgroundJoinTheBattleEnd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.atTheEndJoinTheBattle .container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 150px;
+  gap: 20px;
+}
+.atTheEndJoinTheBattle .container .hText {
+  text-align: start;
+  font-family: "Reaver", serif;
+  font-weight: 700;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.9333333333);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 95%;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=AtTheEndJoinTheBattle.module.css.map */

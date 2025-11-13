@@ -1,7 +1,6 @@
 @use '../../styles/variables';
 
 .heroesSlider {
-
   &.animationLeft {
     animation: rightToLeftSlide forwards;
     animation-duration: 121s;
@@ -99,7 +98,7 @@
 
     &:hover {
       cursor: pointer;
-      transform: scale(1.1);
+      transform: scale(1.2);
       z-index: 10;
     }
 
@@ -112,5 +111,10 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    z-index: 10;
   }
 }

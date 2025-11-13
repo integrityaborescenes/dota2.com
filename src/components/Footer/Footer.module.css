@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 148px;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.footer .container .images {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.footer .container p {
+  font-family: "Radiance", "Noto Sans", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 0 auto;
+  line-height: 125%;
+}
+
+/*# sourceMappingURL=Footer.module.css.map */
