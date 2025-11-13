@@ -9,7 +9,7 @@ const LatestNews = () => {
                 <p>Latest news</p>
                 <div className={styles.viewAll}>
                     <span>View All</span>
-                    <img className={styles.arrowRight} src="src/assets/images/arrow_left.png"/>
+                    <img className={styles.arrowRight} src="src/assets/images/arrow_left.png" loading="lazy"/>
                 </div>
             </div>
             <div className={styles.newsBlocks}>

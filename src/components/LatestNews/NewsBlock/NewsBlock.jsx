@@ -4,7 +4,7 @@ const NewsBlock = ({newsImage,newsDate,newsTitle,newsText}) => {
     return (
         <div className={styles.newsBlock}>
             <div className={styles.linearGrad}></div>
-            <img className={styles.newsBlock__image} src={newsImage}/>
+            <img className={styles.newsBlock__image} src={newsImage} loading="lazy"/>
             <div className={styles.text__container}>
                 <div className={styles.text}>
                     <span>{newsDate}</span>

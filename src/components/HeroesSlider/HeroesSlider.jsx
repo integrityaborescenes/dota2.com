@@ -1,53 +1,23 @@
+
+import { memo } from 'react'
 import styles from './HeroesSlider.module.scss'
 
+const HeroesSlider = ({heroImg, heroAttribute, heroName, direction}) => {
 
-const HeroesSlider = () => {
     return (
-        <div className={styles.heroesSlider}>
+        <div className={`
+        ${styles.heroesSlider}
+        ${direction === 'rtl' ? styles.animationLeft : styles.animationRight}
+        `}>
             <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
+                <img className={styles.heroImg} src={heroImg} loading="lazy"/>
                 <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
-                </div>
-            </div>
-            <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
-                <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
-                </div>
-            </div>
-            <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
-                <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
-                </div>
-            </div>
-            <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
-                <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
-                </div>
-            </div>
-            <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
-                <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
-                </div>
-            </div>
-            <div className={styles.heroContainer}>
-                <img className={styles.heroImg} src='src/assets/images/heroes/faceless_void.png'/>
-                <div className={styles.heroInfo}>
-                    <img className={styles.heroAttribute} src='src/assets/images/atribute/hero_agility.png'/>
-                    <p className={styles.heroName}>Faceless Void</p>
+                    <img className={styles.heroAttribute} src={heroAttribute}/>
+                    <p className={styles.heroName}>{heroName}</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default HeroesSlider
+export default memo(HeroesSlider)

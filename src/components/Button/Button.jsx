@@ -1,9 +1,12 @@
 import styles from "./Button.module.scss";
 
 
-const Button = ({buttonText}) => {
+const Button = ({buttonText,onRelocateToSteam}) => {
     return (
-        <button className={styles.button}>
+        <button
+            className={styles.button}
+            onClick={onRelocateToSteam}
+        >
                 <p>{buttonText}</p>
         </button>
     )
