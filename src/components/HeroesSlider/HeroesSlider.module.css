@@ -1,103 +1,17 @@
-.heroesSlider.animationLeft {
-  animation: rightToLeftSlide forwards;
-  animation-duration: 121s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes rightToLeftSlide {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-7420px);
-  }
-}
-.heroesSlider.animationRight {
-  animation: leftToRightSlide forwards;
-  animation-duration: 121s;
-  animation-direction: normal;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes leftToRightSlide {
-  0% {
-    transform: translateX(-7420px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.heroesSlider .heroContainer {
-  min-width: 255px;
-  height: 127px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s ease, z-index 0.25s ease;
-}
-.heroesSlider .heroContainer .heroImg {
-  object-fit: cover;
-  max-width: 255px;
-  width: 100%;
-  height: 127px;
-}
-.heroesSlider .heroContainer .heroInfo {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  left: 4%;
-  bottom: 6%;
-}
-.heroesSlider .heroContainer .heroInfo .heroAttribute {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  max-width: 30px;
-  width: 100%;
-  height: 30px;
-}
-.heroesSlider .heroContainer .heroInfo .heroName {
-  text-align: start;
-  display: flex;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  align-items: center;
-  margin: 0;
-  max-width: 170px;
-  width: 100%;
-  height: 36px;
-  font-size: 18px;
-  line-height: 20px;
-  font-family: "Reaver", serif;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0px 0px 4px #000;
-}
-.heroesSlider .heroContainer:hover {
-  cursor: pointer;
-  transform: scale(1.2);
-  z-index: 10;
-}
-.heroesSlider .heroContainer:hover .heroAttribute {
-  opacity: 1;
-  transform: translateY(0);
-}
-.heroesSlider .heroContainer:hover .heroName {
-  opacity: 1;
-  transform: translateY(0);
-}
-.heroesSlider:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  z-index: 10;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   HeroesSlider.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=HeroesSlider.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   HeroesSlider.module.scss 1:1  root stylesheet";
+}

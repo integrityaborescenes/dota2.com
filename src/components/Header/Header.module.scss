@@ -1,4 +1,4 @@
-@use '../../styles/variables';
+@use '@/styles/variables';
 
 .header {
   display: flex;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   max-width: 800px;
   width: 100%;
   height: 80px;
@@ -37,11 +37,12 @@
   max-width: 200px;
   width: 100%;
   height: 50px;
-  background-image: url('src/assets/images/dota2_logo.png');
+  background-image: url('@/assets/images/dota2_logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.8;
+  margin-right: 25px;
 
   &:hover {
     cursor: pointer;
@@ -50,14 +51,17 @@
 }
 
 .nav__game {
-  max-width: 85px;
+  position: relative;
+  max-width: 128px;
   width: 100%;
-  height: 27px;
+  height: 54px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  transition: border-color 0.2s ease, background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease;
 
   p {
     font-family: variables.$second-font;
@@ -66,28 +70,80 @@
     opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 3px;
+  }
 
-    &:hover {
-      cursor: pointer;
-      opacity: 1;
-      color: variables.$clear-white;
+  .gameMenu {
+    opacity: 0;
+    left: -2%;
+    top: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 180px;
+    height: 97px;
+    gap: 5px;
+    transition: opacity 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0);
+    z-index: 10;
+
+    li {
+      padding-left: 10px;
+      max-width: 176px;
+      width: 100%;
+      height: 17px;
+      text-align: start;
+      list-style-type: none;
+      font-family: variables.$main-font;
+      color: variables.$white-color;
+      font-size: 14px;
+      letter-spacing: 2px;
+      opacity: .8;
+      text-transform: uppercase;
+      transition: transform 0.2s ease;
+      &:hover{
+        cursor: pointer;
+        transform: translateX(5px);
+      }
     }
+
   }
 
   .arrowDownGame {
     max-width: 10px;
     width: 100%;
     height: 6px;
-    background-image: url('src/assets/images/arrow_over.png');
+    background-image: url('@/assets/images/arrow_over.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.8;
 
-    &:hover {
+  }
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: rgba(244, 244, 244, .2);
+
+    &.p {
+      cursor: pointer;
+      opacity: 1;
+      color: variables.$clear-white;
+    }
+
+    &:hover .gameMenu {
+      opacity: 1;
+      border-color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(244, 244, 244, .2);
+    }
+
+    &:hover .arrowDownGame {
       cursor: pointer;
     }
   }
+
 }
 
 .header__nav {
@@ -168,7 +224,7 @@
       max-width: 12px;
       width: 100%;
       height: 12px;
-      background-image: url('src/assets/images/language.svg');
+      background-image: url('@/assets/images/language.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -179,7 +235,7 @@
       max-width: 10px;
       width: 100%;
       height: 6px;
-      background-image: url('src/assets/images/arrow_over.png');
+      background-image: url('@/assets/images/arrow_over.png');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
@@ -226,7 +282,7 @@
       max-width: 27px;
       width: 100%;
       height: 27px;
-      background-image: url('src/assets/images/steamIco.svg');
+      background-image: url('@/assets/images/steamIco.svg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;

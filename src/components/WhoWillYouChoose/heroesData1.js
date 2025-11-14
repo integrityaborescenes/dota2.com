@@ -1,145 +1,178 @@
-export const heroes =[
+// HERO IMAGES
+import faceless_void from '@/assets/images/heroes/faceless_void.png';
+import abaddon from '@/assets/images/heroes/abaddon.png';
+import abyssal_underlord from '@/assets/images/heroes/abyssal_underlord.png';
+import alchemist from '@/assets/images/heroes/alchemist.png';
+import ancient_apparition from '@/assets/images/heroes/ancient_apparition.png';
+import antimage from '@/assets/images/heroes/antimage.png';
+import arc_warden from '@/assets/images/heroes/arc_warden.png';
+import axe from '@/assets/images/heroes/axe.png';
+import bane from '@/assets/images/heroes/bane.png';
+import batrider from '@/assets/images/heroes/batrider.png';
+import beastmaster from '@/assets/images/heroes/beastmaster.png';
+import bloodseeker from '@/assets/images/heroes/bloodseeker.png';
+import bounty_hunter from '@/assets/images/heroes/bounty_hunter.png';
+import brewmaster from '@/assets/images/heroes/brewmaster.png';
+import bristleback from '@/assets/images/heroes/bristleback.png';
+import broodmother from '@/assets/images/heroes/broodmother.png';
+import centaur from '@/assets/images/heroes/centaur.png';
+import chaos_knight from '@/assets/images/heroes/chaos_knight.png';
+import chen from '@/assets/images/heroes/chen.png';
+import clinkz from '@/assets/images/heroes/clinkz.png';
+import crystal_maiden from '@/assets/images/heroes/crystal_maiden.png';
+import dark_seer from '@/assets/images/heroes/dark_seer.png';
+import dark_willow from '@/assets/images/heroes/dark_willow.png';
+import dawnbreaker from '@/assets/images/heroes/dawnbreaker.png';
+import dazzle from '@/assets/images/heroes/dazzle.png';
+import death_prophet from '@/assets/images/heroes/death_prophet.png';
+import disruptor from '@/assets/images/heroes/disruptor.png';
+import doom from '@/assets/images/heroes/doom_bringer.png';
+
+// ATTRIBUTE IMAGES
+import hero_agility from '@/assets/images/attribute/hero_agility.png';
+import hero_strength from '@/assets/images/attribute/hero_strength.png';
+import hero_intelligence from '@/assets/images/attribute/hero_intelligence.png';
+import hero_universal from '@/assets/images/attribute/hero_universal.png';
+
+export const heroes = [
     {
-      heroName: "Faceless Void",
-      heroImg: '../../src/assets/images/heroes/faceless_void.png',
-      heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroName: "Faceless Void",
+        heroImg: faceless_void,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Abaddon",
-        heroImg: '../../src/assets/images/heroes/abaddon.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: abaddon,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Underlord",
-        heroImg: '../../src/assets/images/heroes/abyssal_underlord.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: abyssal_underlord,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Alchemist",
-        heroImg: '../../src/assets/images/heroes/alchemist.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: alchemist,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Ancient Apparation",
-        heroImg: '../../src/assets/images/heroes/ancient_apparition.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: ancient_apparition,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Antimage",
-        heroImg: '../../src/assets/images/heroes/antimage.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: antimage,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Arc warden",
-        heroImg: '../../src/assets/images/heroes/arc_warden.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: arc_warden,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Axe",
-        heroImg: '../../src/assets/images/heroes/axe.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: axe,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Bane",
-        heroImg: '../../src/assets/images/heroes/bane.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_universal.png',
+        heroImg: bane,
+        heroAttribute: hero_universal,
     },
     {
         heroName: "Batrider",
-        heroImg: '../../src/assets/images/heroes/batrider.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_universal.png',
+        heroImg: batrider,
+        heroAttribute: hero_universal,
     },
     {
         heroName: "Beastmaster",
-        heroImg: '../../src/assets/images/heroes/beastmaster.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_universal.png',
+        heroImg: beastmaster,
+        heroAttribute: hero_universal,
     },
     {
         heroName: "Bloodseeker",
-        heroImg: '../../src/assets/images/heroes/bloodseeker.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: bloodseeker,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Bounty Hunter",
-        heroImg: '../../src/assets/images/heroes/bounty_hunter.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: bounty_hunter,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Brewmaster",
-        heroImg: '../../src/assets/images/heroes/brewmaster.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: brewmaster,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Bristleback",
-        heroImg: '../../src/assets/images/heroes/bristleback.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: bristleback,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Broodmother",
-        heroImg: '../../src/assets/images/heroes/broodmother.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: broodmother,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Centaur",
-        heroImg: '../../src/assets/images/heroes/centaur.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: centaur,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Chaos Knight",
-        heroImg: '../../src/assets/images/heroes/chaos_knight.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: chaos_knight,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Chen",
-        heroImg: '../../src/assets/images/heroes/chen.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: chen,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Clinkz",
-        heroImg: '../../src/assets/images/heroes/clinkz.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_agility.png',
+        heroImg: clinkz,
+        heroAttribute: hero_agility,
     },
     {
         heroName: "Crystal Maiden",
-        heroImg: '../../src/assets/images/heroes/crystal_maiden.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: crystal_maiden,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Dark Seer",
-        heroImg: '../../src/assets/images/heroes/dark_seer.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_universal.png',
+        heroImg: dark_seer,
+        heroAttribute: hero_universal,
     },
     {
         heroName: "Dark Willow",
-        heroImg: '../../src/assets/images/heroes/dark_willow.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: dark_willow,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Dawnbreaker",
-        heroImg: '../../src/assets/images/heroes/dawnbreaker.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: dawnbreaker,
+        heroAttribute: hero_strength,
     },
     {
         heroName: "Dazzle",
-        heroImg: '../../src/assets/images/heroes/dazzle.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: dazzle,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Death prophet",
-        heroImg: '../../src/assets/images/heroes/death_prophet.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_universal.png',
+        heroImg: death_prophet,
+        heroAttribute: hero_universal,
     },
     {
         heroName: "Disruptor",
-        heroImg: '../../src/assets/images/heroes/disruptor.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_intelligence.png',
+        heroImg: disruptor,
+        heroAttribute: hero_intelligence,
     },
     {
         heroName: "Doom",
-        heroImg: '../../src/assets/images/heroes/doom_bringer.png',
-        heroAttribute: '../../src/assets/images/attribute/hero_strength.png',
+        heroImg: doom,
+        heroAttribute: hero_strength,
     },
-
-
-
-]
+];

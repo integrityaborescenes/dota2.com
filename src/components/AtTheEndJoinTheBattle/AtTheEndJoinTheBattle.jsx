@@ -1,5 +1,4 @@
 import styles from './AtTheEndJoinTheBattle.module.scss'
-import BigBlockWText from "../BigBlockWText/BigBlockWText.jsx";
 import OrangeLine from "../OrangeLine/OrangeLine.jsx";
 import Button from "../Button/Button.jsx";
 

@@ -1,16 +1,17 @@
-.joinTheBattleBlock {
-  transform: translateY(-15%);
-  z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/images/radiant_direBackground.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-  max-width: 100%;
-  width: 100%;
-  height: 974px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   JoinTheBattle.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=JoinTheBattle.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   JoinTheBattle.module.scss 1:1  root stylesheet";
+}

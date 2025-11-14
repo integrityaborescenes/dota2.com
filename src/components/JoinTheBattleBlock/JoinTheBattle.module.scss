@@ -1,9 +1,9 @@
-@use '../../styles/variables';
+@use '@/styles/variables';
 
 .joinTheBattleBlock {
   transform: translateY(-15%);
   z-index: 10;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/images/radiant_direBackground.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("@/assets/images/radiant_direBackground.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;

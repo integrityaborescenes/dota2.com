@@ -1,92 +1,17 @@
-.newsBlock {
-  max-width: 370px;
-  width: 100%;
-  height: 245px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5647058824);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0px 0px 10px #000;
-}
-.newsBlock .linearGrad {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(19, 23, 28, 0) 60%, rgba(19, 23, 28, 0.733) 70%, rgb(19, 23, 28) 90%);
-}
-.newsBlock .newsBlock__image {
-  max-width: 370px;
-  width: 100%;
-  height: 243px;
-  object-fit: cover;
-}
-.newsBlock .text__container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.newsBlock .text__container .text {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  transform: translateY(55%);
-  transition: transform 0.3s ease;
-}
-.newsBlock .text__container .text h3 {
-  max-width: 320px;
-  margin: 0;
-  text-align: left;
-  font-family: "Reaver", serif;
-  font-weight: bold;
-  font-size: 24px;
-  letter-spacing: 0px;
-  text-shadow: 0px 0px 10px #000;
-  color: white;
-  line-height: 115%;
-  margin-bottom: 5px;
-}
-.newsBlock .text__container .text span {
-  text-align: left;
-  margin: 0;
-  font-family: "Radiance", "Noto Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.5647058824);
-  text-transform: uppercase;
-}
-.newsBlock .text__container .text p {
-  max-width: 320px;
-  width: 100%;
-  height: 100px;
-  text-align: start;
-  font-size: 18px;
-  opacity: 0;
-  line-height: 1;
-  color: #A9A9A9;
-  font-family: "Radiance", "Noto Sans", sans-serif;
-}
-.newsBlock:hover .newsBlock__image {
-  filter: brightness(30%);
-}
-.newsBlock:hover {
-  cursor: pointer;
-  border-bottom: 2px solid #ff6046;
-  transform: scale(1.03);
-}
-.newsBlock:hover .text {
-  cursor: pointer;
-  transform: translateY(-5%);
-}
-.newsBlock:hover .text p {
-  opacity: 1;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   NewsBlock.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=NewsBlock.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   NewsBlock.module.scss 1:1  root stylesheet";
+}

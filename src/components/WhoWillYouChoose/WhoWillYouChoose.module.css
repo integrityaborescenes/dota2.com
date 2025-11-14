@@ -1,41 +1,17 @@
-.whoWillYouChoose {
-  z-index: 10;
-  transform: translateY(-50px);
-  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 3%, rgba(0, 0, 0, 0.8) 6%, rgba(0, 0, 0, 0.7) 9%, rgba(0, 0, 0, 0.6) 12%, rgba(0, 0, 0, 0.5) 15%, rgba(0, 0, 0, 0.4) 18%, rgba(0, 0, 0, 0.3) 21%, rgba(0, 0, 0, 0.2) 24%, rgba(0, 0, 0, 0.1) 27%, transparent 100%), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("src/assets/images/heroes_fullBackground.jpg");
-  background-size: 3500px;
-  background-position: center top;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  width: 100%;
-  min-height: 2000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-}
-.whoWillYouChoose .whoWillYouChooseContainer {
-  margin-top: 900px;
-  margin-bottom: 40px;
-}
-.whoWillYouChoose .heroSlider {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1525px;
-  width: 100%;
-  height: 690px;
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
-}
-.whoWillYouChoose .heroSlider .heroRow {
-  object-fit: cover;
-  display: flex;
-  gap: 10px;
-  width: 100%;
-  align-items: center;
-  height: 138px;
-  position: relative;
-  overflow: hidden;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   WhoWillYouChoose.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=WhoWillYouChoose.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   WhoWillYouChoose.module.scss 1:1  root stylesheet";
+}

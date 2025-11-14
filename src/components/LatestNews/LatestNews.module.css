@@ -1,72 +1,17 @@
-.latestNewsBlock {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  z-index: 20;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 5%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.6) 15%, rgba(0, 0, 0, 0.8) 20%, rgb(0, 0, 0) 30%, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 70%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0.2) 95%, transparent 100%);
-}
-.latestNewsBlock .latestNews {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  max-width: 1170px;
-  width: 100%;
-  justify-content: start;
-}
-.latestNewsBlock .latestNews p {
-  margin: 0;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.9333333333);
-  font-family: "Radiance", "Noto Sans", sans-serif;
-}
-.latestNewsBlock .latestNews .viewAll {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  transition: transform 0.2s ease;
-}
-.latestNewsBlock .latestNews .viewAll span {
-  text-align: left;
-  font-family: "Radiance", "Noto Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.5647058824);
-  text-transform: uppercase;
-}
-.latestNewsBlock .latestNews .viewAll .arrowRight {
-  max-width: 20px;
-  width: 100%;
-  height: 20px;
-  transform: rotate(200grad);
-  margin-bottom: 2px;
-}
-.latestNewsBlock .latestNews .viewAll:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-.latestNewsBlock .newsBlocks {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  animation: fromDownToTop 2s ease 0s forwards;
-}
-@keyframes fromDownToTop {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   LatestNews.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=LatestNews.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   LatestNews.module.scss 1:1  root stylesheet";
+}

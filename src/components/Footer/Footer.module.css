@@ -1,29 +1,17 @@
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 148px;
-}
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-.footer .container .images {
-  display: flex;
-  flex-direction: row;
-  gap: 80px;
-}
-.footer .container p {
-  font-family: "Radiance", "Noto Sans", sans-serif;
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  margin: 0 auto;
-  line-height: 125%;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use '@/styles/variables';
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   Footer.module.scss 1:1  root stylesheet */
 
-/*# sourceMappingURL=Footer.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use '@/styles/variables';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   Footer.module.scss 1:1  root stylesheet";
+}

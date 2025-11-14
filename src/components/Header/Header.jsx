@@ -10,6 +10,11 @@ const Header = () => {
                 <div className={styles.nav__game}>
                     <p>Game</p>
                     <div className={styles.arrowDownGame}></div>
+                    <div className={styles.gameMenu}>
+                        <li>Patches</li>
+                        <li>Gameplay Updates</li>
+                        <li>Previous Updates</li>
+                    </div>
                 </div>
                 <ul className={styles.header__nav}>
                     {headerNav.map(x =>  <li key={x} className={styles.nav_other}>{x.toUpperCase()}</li>)}
