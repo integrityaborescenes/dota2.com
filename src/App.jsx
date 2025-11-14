@@ -1,24 +1,16 @@
-import Header from "./components/Header/Header.jsx";
-import Video from "./components/BackgroundVid/Video.jsx";
-import MainDownloadOnSteam from "./components/MainDownloadOnSteam/MainDownloadOnSteam.jsx";
-import LatestNews from "./components/LatestNews/LatestNews.jsx";
-import JoinTheBattle from "./components/JoinTheBattleBlock/JoinTheBattle.jsx";
-import WhoWillYouChoose from "./components/WhoWillYouChoose/WhoWillYouChoose.jsx";
-import AtTheEndJoinTheBattle from "./components/AtTheEndJoinTheBattle/AtTheEndJoinTheBattle.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Router from "@/routing/Router.jsx";
+import Home from './pages/home/Home.jsx'
+import News from './pages/news/News.jsx'
 
 const App = () => {
+    const routes = {
+        '/': Home,
+        '/news': News,
+        '*': Home,
+    }
+
     return (
-        <>
-            <Header />
-            <Video />
-            <MainDownloadOnSteam />
-            <LatestNews />
-            <JoinTheBattle />
-            <WhoWillYouChoose />
-            <AtTheEndJoinTheBattle />
-            <Footer />
-        </>
+        <Router routes={routes} />
     )
 }
 
