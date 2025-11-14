@@ -1,5 +1,5 @@
 # Dota2 Main Page
-This is a **non-commercial React project** that recreates the main page of Dota 2, with some **custom adjustments and tweaks according to my personal taste** (currently **without adaptive design**).
+This is a **non-commercial React project** that recreates the **Dota 2 website** , with some **custom adjustments and tweaks according to my personal taste** (currently **without adaptive design**).
 
 ## Technologies Used
 - **React**
