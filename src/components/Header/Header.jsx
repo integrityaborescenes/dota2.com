@@ -1,3 +1,4 @@
+import {languages} from "@/components/Header/languageData.js";
 import styles from './Header.module.scss'
 
 const Header = () => {
@@ -27,6 +28,9 @@ const Header = () => {
                         <div className={styles.language__ico}></div>
                         <p>Select language</p>
                         <div className={styles.arrowDown}></div>
+                        <div className={styles.selectLanguageWindow}>
+                            {languages.map((lang) => (<a>{lang.label}</a>))}
+                        </div>
                     </div>
                 </div>
                 <button className={styles.play__button}>
