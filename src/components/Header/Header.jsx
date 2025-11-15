@@ -29,7 +29,7 @@ const Header = () => {
                         <p>Select language</p>
                         <div className={styles.arrowDown}></div>
                         <div className={styles.selectLanguageWindow}>
-                            {languages.map((lang) => (<a>{lang.label}</a>))}
+                            {languages.map((lang) => (<a key={lang.label}>{lang.label}</a>))}
                         </div>
                     </div>
                 </div>

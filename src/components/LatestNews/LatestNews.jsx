@@ -14,8 +14,8 @@ const LatestNews = () => {
                 </div>
             </div>
             <div className={styles.newsBlocks}>
-                {newsData.map((x) => (
-                    <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} />
+                {newsData.filter((x,index) => index < 3).map((x) => (
+                    <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} smallBlock={true}/>
                 ))}
             </div>
         </div>
