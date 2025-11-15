@@ -1,11 +1,13 @@
 import Header from "@/components/Header/Header.jsx";
-import Footer from "@/components/Footer/Footer.jsx";
+import FeaturedPost from "@/components/FeaturedPost/FeaturedPost.jsx";
+import NewsBackgroundHeader from "@/components/NewsBackgroundHeader/NewsBackgroundHeader.jsx";
 
 const News = () => {
     return (
         <>
             <Header />
-            <Footer />
+            <FeaturedPost />
+            <NewsBackgroundHeader />
         </>
     )
 }

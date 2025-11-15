@@ -1,0 +1,12 @@
+.backgroundHeader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 700px;
+  background-image: url("@/assets/images/default_header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -20;
+
+}
