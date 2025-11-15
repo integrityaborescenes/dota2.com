@@ -6,11 +6,8 @@ const NewsAndUpdates = () => {
 
     const handleClick = () => {
         setIsClicked(prev => (prev === 'news' ? 'updates' : 'news'))
+        return isClicked
     }
-
-    useEffect(() => {
-
-    }, [isClicked]);
 
     return (
         <div className={styles.newsAndUpdates}>
