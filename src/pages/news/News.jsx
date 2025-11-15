@@ -5,23 +5,22 @@ import NewsAndUpdates from "@/components/NewsAndUpdates/NewsAndUpdates.jsx";
 import AllNewsBlock from "@/components/AllNewsBlock/AllNewsBlock.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import UpdatesBlock from "@/components/UpdatesBlock/UpdatesBlock.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const News = () => {
+    const [whatTab, setWhatTab] = useState('news')
 
     return (
         <>
             <Header />
-            <FeaturedPost />
-            <NewsBackgroundHeader />
-            <NewsAndUpdates  />
+            <main>
+                <FeaturedPost />
+                <NewsBackgroundHeader />
+                <NewsAndUpdates onChange={(current) => setWhatTab(current)} />
 
-
-            <AllNewsBlock />
-            <UpdatesBlock />
-
-
-
+                {whatTab === 'news' && <AllNewsBlock />}
+                {whatTab === 'updates' && <UpdatesBlock />}
+            </main>
             <Footer />
         </>
     )
