@@ -1,7 +1,7 @@
 import {newsData} from '@/components/LatestNews/newsData.js'
 import NewsBlock from "@/components/LatestNews/NewsBlock/NewsBlock.jsx";
 import useCountPages from "@/assets/hooks/useCountPages.js";
-import {useCallback, useEffect, useState} from "react";
+import {useState} from "react";
 import styles from './AllNewsBlock.module.scss'
 
 
@@ -27,6 +27,12 @@ const AllNewsBlock = () => {
                 }
             </div>
             <div className={styles.pages}>
+                <div className={`
+                ${styles.page}
+                ${currentPage === 1 ? styles.invisible : null}
+                `}
+                     onClick={() => setCurrentPage(1)}
+                >{'<'}</div>
                 {newsPages.map((p,i) => (
                 <div
                     key={i}
@@ -38,6 +44,12 @@ const AllNewsBlock = () => {
                 >
                     {+p+1}
                 </div>))}
+                <div className={`
+                ${styles.page}
+                ${currentPage === newsPages.length ? styles.invisible : null}
+                `}
+                     onClick={() => setCurrentPage(newsPages.length)}
+                >{'>'}</div>
             </div>
         </div>
     )
