@@ -4,29 +4,36 @@ import {useEffect, useState} from "react";
 const NewsAndUpdates = ({active, onChange}) => {
     const [isClicked, setIsClicked] = useState('news')
 
-    const handleClick = () => {
-        setIsClicked(prev => (prev === 'news' ? 'updates' : 'news'))
+    const handleClick = (tab) => {
+        setIsClicked(tab)
+        onChange(tab);
     }
 
     return (
         <div className={styles.newsAndUpdates}>
             <div className={styles.container}>
                 <a
-                    onChange={onChange(isClicked)}
-                    onClick={handleClick}
+                    onClick={() => {
+                        handleClick('news');
+                    }}
                     className={`
                     ${styles.news}
                     ${isClicked === 'news' ? styles.active : null}
                     `}
-                >News</a>
+                >
+                    News
+                </a>
                 <a
-                    onChange={onChange(isClicked)}
-                    onClick={handleClick}
+                    onClick={() => {
+                        handleClick('updates');
+                    }}
                     className={`
                     ${styles.updates}
                     ${isClicked === 'updates' ? styles.active : null}
                     `}
-                >Updates</a>
+                >
+                    Updates
+                </a>
             </div>
         </div>
     )

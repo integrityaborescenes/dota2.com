@@ -15,24 +15,26 @@ const UpdatesBlock = () => {
                         {update.items && (
                             <ul>
                                 {update.items.map((item, i) => (
-                                    <p> <li key={i}>
+                                     <li key={i}>
+
                                         {item.li}
 
                                         {item.sub && (
                                             <ul>
                                                 {item.sub.map((s, j) => (
-                                                    <p><li key={j}>{s}</li></p>
+                                                    <li key={j}>{s}</li>
                                                 ))}
                                             </ul>
                                         )}
-                                    </li> </p>
+
+                                    </li>
                                 ))}
                             </ul>
                         )}
                         {update.li && (
                             <ul>
                                 {update.li.map((line, i) => (
-                                    <p><li key={i}>{line}</li></p>
+                                    <li key={i}>{line}</li>
                                 ))}
                             </ul>
                         )}
