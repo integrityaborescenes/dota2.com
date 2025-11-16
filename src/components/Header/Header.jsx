@@ -1,5 +1,7 @@
 import {languages} from "@/components/Header/languageData.js";
 import styles from './Header.module.scss'
+import RouterLink from "@/routing/RouterLink.jsx";
+import {BASE_URL} from "@/routing/index.js";
 
 const Header = ({active}) => {
     const headerNav =['heroes', 'news', 'esports']
@@ -7,7 +9,9 @@ const Header = ({active}) => {
     return (
         <div className={styles.header}>
             <div className={styles.headerLeft}>
-                <div className={styles.header__logo}></div>
+                <RouterLink to={`${BASE_URL}`} aria-label="Home page">
+                    <div className={styles.header__logo}></div>
+                </RouterLink>
                 <div className={styles.nav__game}>
                     <p>Game</p>
                     <div className={styles.arrowDownGame}></div>
@@ -19,10 +23,13 @@ const Header = ({active}) => {
                 </div>
                 <ul className={styles.header__nav}>
                     {headerNav.map(x =>
-                        <li key={x} className={`
+                        <RouterLink key={x} to={`${BASE_URL}news`} aria-label="News page">
+                        <li className={`
                         ${styles.nav_other}
                         ${active === x ? styles.active : null}
-                        `}>{x.toUpperCase()}</li>
+                        `}>{x.toUpperCase()}
+                        </li>
+                        </RouterLink>
                     )}
                 </ul>
             </div>
