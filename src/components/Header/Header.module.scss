@@ -163,6 +163,12 @@
   list-style-type: none;
   letter-spacing: 3px;
 
+  &.active {
+    opacity: 1;
+    color: variables.$clear-white;
+    border-bottom: 3px solid variables.$orange-color;
+  }
+
   &:hover {
     cursor: pointer;
     opacity: 1;

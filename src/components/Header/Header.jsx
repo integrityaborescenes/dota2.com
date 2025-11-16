@@ -1,7 +1,7 @@
 import {languages} from "@/components/Header/languageData.js";
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = ({active}) => {
     const headerNav =['heroes', 'news', 'esports']
 
     return (
@@ -18,7 +18,12 @@ const Header = () => {
                     </div>
                 </div>
                 <ul className={styles.header__nav}>
-                    {headerNav.map(x =>  <li key={x} className={styles.nav_other}>{x.toUpperCase()}</li>)}
+                    {headerNav.map(x =>
+                        <li key={x} className={`
+                        ${styles.nav_other}
+                        ${active === x ? styles.active : null}
+                        `}>{x.toUpperCase()}</li>
+                    )}
                 </ul>
             </div>
             <div className={styles.headerRight}>

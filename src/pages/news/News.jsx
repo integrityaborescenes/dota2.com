@@ -12,7 +12,7 @@ const News = () => {
 
     return (
         <>
-            <Header />
+            <Header active={'news'}/>
             <main>
                 <FeaturedPost />
                 <NewsBackgroundHeader />
