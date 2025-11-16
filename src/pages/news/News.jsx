@@ -17,7 +17,6 @@ const News = () => {
                 <FeaturedPost />
                 <NewsBackgroundHeader />
                 <NewsAndUpdates onChange={(current) => setWhatTab(current)} />
-
                 {whatTab === 'news' && <AllNewsBlock />}
                 {whatTab === 'updates' && <UpdatesBlock />}
             </main>
