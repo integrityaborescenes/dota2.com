@@ -3,6 +3,8 @@ import NewsBlock from "@/components/LatestNews/NewsBlock/NewsBlock.jsx";
 import useCountPages from "@/assets/hooks/useCountPages.js";
 import {useState} from "react";
 import styles from './AllNewsBlock.module.scss'
+import {BASE_URL} from "@/routing/index.js";
+import RouterLink from "@/routing/RouterLink.jsx";
 
 
 const AllNewsBlock = () => {
@@ -16,13 +18,26 @@ const AllNewsBlock = () => {
                 {currentPage !==1 &&
                     newsData.filter((x,index) => index > c*currentPage-c-1 && index < c * currentPage).map
                     ((x) =>
-                        (<NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>)
+                        (   <RouterLink
+                            to={`${BASE_URL}news/${x.id}`}
+                            aria-label="Specific news"
+                        >
+                            <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>
+                            </RouterLink>
+                        )
                     )
                 }
                 {currentPage === 1 &&
                     newsData.filter((x,index) => index < c * currentPage).map
                     ((x) =>
-                        (<NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>)
+                        (<RouterLink
+                            to={`${BASE_URL}news/${x.id}`}
+                            aria-label="Specific news">
+                            <NewsBlock
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>
+                        </RouterLink>
+                        )
                     )
                 }
             </div>

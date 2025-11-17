@@ -7,21 +7,30 @@ import {BASE_URL} from "@/routing/index.js";
 import RouterLink from "@/routing/RouterLink.jsx";
 
 const SelectedNews = ({newsInfo}) => {
+
     return (
         <div className={styles.selectedNews}>
             <BackgroundBody />
             <div className={styles.container}>
-                <div className={styles.topContainer}>
+                <div className={`
+                ${styles.topContainer}
+                ${styles.animation}
+                `}>
                     <div className={styles.backToNews}>
                         <img className={styles.arrowLeft} src={arrowLeft} loading="lazy"/>
-                        <p>Back to news</p>
+                        <RouterLink to={`${BASE_URL}news`} aria-label="News page">
+                            <p>Back to news</p>
+                        </RouterLink>
                     </div>
                     <div className={styles.postInfo}>
                         <h2>{newsInfo.newsTitle}</h2>
                         <span>{newsInfo.newsDate}</span>
                     </div>
                 </div>
-                <div className={styles.postContainer}>
+                <div className={`
+                ${styles.postContainer}
+                ${styles.animation}
+                `}>
                     <img className={styles.image} src={newsInfo.newsImage} loading="lazy"/>
                     <div className={styles.postText}>
                         {newsInfo.fullText.map((p) => <p key={p.id}>{p}</p>)}
@@ -30,12 +39,13 @@ const SelectedNews = ({newsInfo}) => {
                 <div className={styles.latestNews}>
                     <p className={styles.pText}>Latest news</p>
                     <div className={styles.newsRow}>
-                        {newsData.filter((x,index) => index < 4 && x.id !== newsInfo.id).map((x) => (
+                        {newsData.filter((x) => x.id !== newsInfo?.id).slice(0,3).map((x) => (
                             <RouterLink
                                 to={`${BASE_URL}news/${x.id}`}
                                 aria-label="Specific news"
                             >
                                 <NewsBlock
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                     newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>
                             </RouterLink>
                         ))}

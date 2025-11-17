@@ -23,7 +23,9 @@ const LatestNews = () => {
                         to={`${BASE_URL}news/${x.id}`}
                         aria-label="Specific news"
                     >
-                        <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} smallBlock={true}/>
+                        <NewsBlock
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} smallBlock={true}/>
                     </RouterLink>
                 ))}
             </div>
