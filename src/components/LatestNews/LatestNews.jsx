@@ -19,7 +19,12 @@ const LatestNews = () => {
             </div>
             <div className={styles.newsBlocks}>
                 {newsData.filter((x,index) => index < 3).map((x) => (
-                    <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} smallBlock={true}/>
+                    <RouterLink
+                        to={`${BASE_URL}news/${x.id}`}
+                        aria-label="Specific news"
+                    >
+                        <NewsBlock newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle} smallBlock={true}/>
+                    </RouterLink>
                 ))}
             </div>
         </div>

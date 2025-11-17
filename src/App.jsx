@@ -5,8 +5,9 @@ import SpecificNews from "@/pages/specific news/SpecificNews.jsx";
 
 const App = () => {
     const routes = {
-        '/': SpecificNews,
+        '/': Home,
         '/news': News,
+        '/news/:id': SpecificNews,
         '*': Home,
     }
 

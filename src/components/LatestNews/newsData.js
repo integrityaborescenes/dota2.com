@@ -17,6 +17,7 @@ import theCharmsofTheSnake from '@/assets/images/theCharmsofTheSnake.png';
 export const newsData = [
 
     {
+        id: 'DotaXMonsterHunter',
         newsImage: DotaXMonsterHunter,
         newsDate: '11 ноября 2025 г.',
         newsTitle: "Dota x Monster Hunter",
@@ -31,6 +32,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'collectorChest',
         newsImage: collectorChest,
         newsDate: '8 октября 2025 г.',
         newsTitle: "Collector's Cache Voting Open Now",
@@ -43,6 +45,7 @@ export const newsData = [
             ]
     },
     {
+        id: 'tiWinners',
         newsImage: tiWinners,
         newsDate: '17 сентября 2025 г.',
         newsTitle: 'The International 2025 Grand Champions',
@@ -55,6 +58,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theInt',
         newsImage: theInt,
         newsDate: '9 сентября 2025 г.',
         newsTitle: 'The International 2025 Arrives',
@@ -67,6 +71,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theIntInfo',
         newsImage: theIntInfo,
         newsDate: '30 августа 2025 г.',
         newsTitle: 'The International: Streams, Secret Shop, and More',
@@ -79,6 +84,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theIntBundles',
         newsImage: theIntBundles,
         newsDate: '20 августа 2025 г.',
         newsTitle: 'The International: Bundles and Predictions',
@@ -91,6 +97,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'quartCurios',
         newsImage: quartCurios,
         newsDate: '6 августа 2025 г.',
         newsTitle: 'Quartero\'s Curios',
@@ -103,6 +110,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'dotaSpringsForward',
         newsImage: dotaSpringsForward,
         newsDate: '23 мая 2025 г.',
         newsTitle: 'Dota Springs Forward',
@@ -115,6 +123,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'dotaShortFilmContest2025',
         newsImage: dotaShortFilmContest2025,
         newsDate: '21 мая 2025 г.',
         newsTitle: 'Dota 2 Short Film Contest 2025',
@@ -127,6 +136,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theInt2025invites',
         newsImage: theInt2025invites,
         newsDate: '15 мая 2025 г.',
         newsTitle: 'The International 2025 - Direct Invites and The Road to TI',
@@ -139,6 +149,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'betweenTheLanes',
         newsImage: betweenTheLanes,
         newsDate: '13 мая 2025 г.',
         newsTitle: 'Between the Lanes: Nest of Thorns',
@@ -151,6 +162,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theInt25Shedule',
         newsImage: theInt25Shedule,
         newsDate: '2 апреля 2025 г.',
         newsTitle: 'The International 2025 — Schedule & Format',
@@ -163,6 +175,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'exploreThe738',
         newsImage: exploreThe738,
         newsDate: '19 февраля 2025 г.',
         newsTitle: 'Explore Wandering Waters in the 7.38 Gameplay Update',
@@ -175,6 +188,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theCrownFallArchive',
         newsImage: theCrownFallArchive,
         newsDate: '6 февраля 2025 г.',
         newsTitle: 'The Crownfall Archive',
@@ -187,6 +201,7 @@ export const newsData = [
         ]
     },
     {
+        id: 'theCharmsofTheSnake',
         newsImage: theCharmsofTheSnake,
         newsDate: '30 января 2025 г.',
         newsTitle: 'The Charms of the Snake',

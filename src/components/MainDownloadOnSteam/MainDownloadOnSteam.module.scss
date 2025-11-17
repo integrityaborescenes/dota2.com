@@ -3,7 +3,7 @@
 .mainDownload {
   max-width: 100vw;
   width: 100%;
-  height: 550px;
+  height: 625px;
   display: flex;
   justify-content: start;
   animation: mainAnim 4s ease 0s forwards;
@@ -31,7 +31,8 @@
     justify-content: center;
     align-items: start;
     text-align: start;
-    margin-left: 180px;
+    margin-left: 192px;
+    padding-top: 100px;
 
     h1 {
       margin: 0;
