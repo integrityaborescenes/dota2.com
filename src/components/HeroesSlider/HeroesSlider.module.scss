@@ -35,6 +35,19 @@
     }
   }
 
+  &.animationChangePos {
+    animation: anim 0.5s ease;
+
+    @keyframes anim {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  }
+
   .heroContainer {
     min-width: 255px;
     height: 127px;
@@ -45,6 +58,10 @@
     overflow: hidden;
     transition: transform 0.25s ease, z-index 0.25s ease;
 
+    &.allHeroesBlock {
+      min-width: 225px;
+      height: 127px;
+    }
 
     .heroImg {
       object-fit: cover;
