@@ -16,6 +16,7 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+    margin-bottom: 15px;
 
 
     .text {
@@ -115,7 +116,7 @@
       transition: filter 0.1s ease;
       margin-left: -4px;
 
-      &:active {
+      &.active {
         filter: none;
       }
     }
@@ -167,7 +168,7 @@
     .heroes {
       position: relative;
       width: 1200px;
-      min-height: 1500px;
+      min-height: 1000px;
       margin-top: 15px;
       margin-bottom: 15px;
 
@@ -184,7 +185,7 @@
         left: 0;
         top: 0;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 200px;
         position: absolute;
         z-index: 10;
         pointer-events: none;

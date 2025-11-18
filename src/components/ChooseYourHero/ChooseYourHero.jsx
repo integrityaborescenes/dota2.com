@@ -1,5 +1,4 @@
 
-import styles from './ChooseYourHero.module.scss'
 import str from '@/assets/images/filterHeroes/filter-str-active.png'
 import agi from '@/assets/images/filterHeroes/filter-agi-active.png'
 import int from '@/assets/images/filterHeroes/filter-int-active.png'
@@ -9,12 +8,19 @@ import search from '@/assets/images/search.svg'
 import HeroesSlider from "@/components/HeroesSlider/HeroesSlider.jsx";
 import {allHeroesData} from "@/pages/heroes/allHeroesData.js";
 import {useState} from "react";
+import hero_agility from '@/assets/images/attribute/hero_agility.png';
+import hero_strength from '@/assets/images/attribute/hero_strength.png';
+import hero_intelligence from '@/assets/images/attribute/hero_intelligence.png';
+import hero_universal from '@/assets/images/attribute/hero_universal.png';
+import styles from './ChooseYourHero.module.scss'
 
 const ChooseYourHero = () => {
     const [input, setInput] = useState('')
+    const [isSortByAttribute,setIsSortByAttribute] = useState('')
     const handleValueChange = (e) => {
         setInput(e.target.value)
     }
+
 
     return (
         <div className={styles.chooseUrHero}>
@@ -29,10 +35,18 @@ const ChooseYourHero = () => {
                     </div>
                     <div className={styles.attribute}>
                         <p>Attribute</p>
-                        <img src={str} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
-                        <img src={agi} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
-                        <img src={int} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
-                        <img src={uni} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={str} className={`${styles.imageInactive} ${isSortByAttribute === hero_strength ? styles.active : null}`}
+                             onClick={() => setIsSortByAttribute(isSortByAttribute !== hero_strength ? hero_strength : '')}
+                             draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={agi} className={`${styles.imageInactive} ${isSortByAttribute === hero_agility ? styles.active : null}`}
+                             onClick={() => setIsSortByAttribute(isSortByAttribute !== hero_agility ? hero_agility : '')}
+                             draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={int} className={`${styles.imageInactive} ${isSortByAttribute === hero_intelligence ? styles.active : null}`}
+                             onClick={() => setIsSortByAttribute(isSortByAttribute !== hero_intelligence ? hero_intelligence : '')}
+                             draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={uni} className={`${styles.imageInactive} ${isSortByAttribute === hero_universal ? styles.active : null}`}
+                             onClick={() => setIsSortByAttribute(isSortByAttribute !== hero_universal ? hero_universal : '')}
+                             draggable="false" loading="lazy" width="44" height="34" />
                     </div>
                     <div className={styles.complexity}>
                         <p>Complexity</p>
@@ -47,7 +61,7 @@ const ChooseYourHero = () => {
                 </div>
                 <div className={styles.heroes}>
                     <div className={styles.heroesRow}>
-                        {
+                        { isSortByAttribute === '' &&
                             allHeroesData.filter((x) => x.heroName.toLowerCase().includes(input.toLowerCase()))
                             .map((heroInfo) => (
                                 <HeroesSlider key={heroInfo.heroName}
@@ -58,6 +72,18 @@ const ChooseYourHero = () => {
                                               animChangePos={true}
                                 />
                             ))
+                        }
+                        { isSortByAttribute !== '' &&
+                            allHeroesData.filter((x) => x.heroAttribute === isSortByAttribute)
+                                .map((heroInfo) => (
+                                    <HeroesSlider key={heroInfo.heroName}
+                                                  heroAttribute={heroInfo.heroAttribute}
+                                                  heroImg={heroInfo.heroImg}
+                                                  heroName={heroInfo.heroName}
+                                                  allHeroesBlock={true}
+                                                  animChangePos={true}
+                                    />
+                                ))
                         }
                     </div>
                     <div className={`

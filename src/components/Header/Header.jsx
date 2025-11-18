@@ -4,7 +4,6 @@ import RouterLink from "@/routing/RouterLink.jsx";
 import {BASE_URL} from "@/routing/index.js";
 
 const Header = ({active}) => {
-    const headerNav =['heroes', 'news', 'esports']
 
     return (
         <div className={styles.header}>
@@ -22,15 +21,24 @@ const Header = ({active}) => {
                     </div>
                 </div>
                 <ul className={styles.header__nav}>
-                    {headerNav.map(x =>
-                        <RouterLink key={x} to={`${BASE_URL}news`} aria-label="News page">
+                    <RouterLink to={`${BASE_URL}heroes`} aria-label="News page">
                         <li className={`
+                            ${styles.nav_other}
+                            ${active === 'heroes' ? styles.active : null}
+                            `}>Heroes</li>
+                    </RouterLink>
+                    <RouterLink to={`${BASE_URL}news`} aria-label="News page">
+                            <li className={`
                         ${styles.nav_other}
-                        ${active === x ? styles.active : null}
-                        `}>{x.toUpperCase()}
-                        </li>
-                        </RouterLink>
-                    )}
+                        ${active === 'news' ? styles.active : null}
+                        `}>News</li>
+                    </RouterLink>
+                    <RouterLink to={`${BASE_URL}esports`} aria-label="News page">
+                    <li className={`
+                        ${styles.nav_other}
+                        ${active === 'esports' ? styles.active : null}
+                        `}>Esports</li>
+                    </RouterLink>
                 </ul>
             </div>
             <div className={styles.headerRight}>
