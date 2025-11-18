@@ -17,10 +17,13 @@ import styles from './ChooseYourHero.module.scss'
 const ChooseYourHero = () => {
     const [input, setInput] = useState('')
     const [isSortByAttribute,setIsSortByAttribute] = useState('')
+    const [isSortByComplexity,setIsSortByComplexity] = useState(0)
+
     const handleValueChange = (e) => {
+        setIsSortByAttribute('')
+        setIsSortByComplexity(0)
         setInput(e.target.value)
     }
-
 
     return (
         <div className={styles.chooseUrHero}>
@@ -50,9 +53,15 @@ const ChooseYourHero = () => {
                     </div>
                     <div className={styles.complexity}>
                         <p>Complexity</p>
-                        <img src={dmnd} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
-                        <img src={dmnd} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
-                        <img src={dmnd} className={styles.imageInactive} draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={dmnd} className={`${styles.imageInactive} ${isSortByComplexity !==0 ? styles.active : null} `}
+                             onClick={() => setIsSortByComplexity(isSortByComplexity !== 1 ? 1 : 0)}
+                             draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={dmnd} className={`${styles.imageInactive} ${isSortByComplexity > 1 ? styles.active : null} `}
+                             onClick={() => setIsSortByComplexity(isSortByComplexity !== 2 ? 2 : 0)}
+                             draggable="false" loading="lazy" width="44" height="34" />
+                        <img src={dmnd} className={`${styles.imageInactive} ${isSortByComplexity > 2 ? styles.active : null} `}
+                             onClick={() => setIsSortByComplexity(isSortByComplexity !== 3 ? 3 : 0)}
+                             draggable="false" loading="lazy" width="44" height="34" />
                     </div>
                     <div className={styles.searchHero}>
                         <img src={search} draggable="false" loading="lazy" width="26" height="26"/>
@@ -61,7 +70,7 @@ const ChooseYourHero = () => {
                 </div>
                 <div className={styles.heroes}>
                     <div className={styles.heroesRow}>
-                        { isSortByAttribute === '' &&
+                        { isSortByAttribute === '' && isSortByComplexity === 0 &&
                             allHeroesData.filter((x) => x.heroName.toLowerCase().includes(input.toLowerCase()))
                             .map((heroInfo) => (
                                 <HeroesSlider key={heroInfo.heroName}
@@ -73,8 +82,20 @@ const ChooseYourHero = () => {
                                 />
                             ))
                         }
-                        { isSortByAttribute !== '' &&
+                        { isSortByAttribute !== '' && isSortByComplexity === 0 &&
                             allHeroesData.filter((x) => x.heroAttribute === isSortByAttribute)
+                                .map((heroInfo) => (
+                                    <HeroesSlider key={heroInfo.heroName}
+                                                  heroAttribute={heroInfo.heroAttribute}
+                                                  heroImg={heroInfo.heroImg}
+                                                  heroName={heroInfo.heroName}
+                                                  allHeroesBlock={true}
+                                                  animChangePos={true}
+                                    />
+                                ))
+                        }
+                        { isSortByComplexity > 0 &&
+                            allHeroesData.filter((x) => x.complexity === isSortByComplexity)
                                 .map((heroInfo) => (
                                     <HeroesSlider key={heroInfo.heroName}
                                                   heroAttribute={heroInfo.heroAttribute}
