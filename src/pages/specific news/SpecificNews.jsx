@@ -6,6 +6,7 @@ import {newsData} from "@/components/LatestNews/newsData.js";
 import {useEffect, useState} from "react";
 
 const SpecificNews = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     const newsId = window.location.pathname.split("/").pop()
     const [newsInfo,setNewsInfo] = useState(newsData.find((info) => info.id === newsId))
 

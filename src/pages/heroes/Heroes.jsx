@@ -4,7 +4,7 @@ import ChooseYourHero from "@/components/ChooseYourHero/ChooseYourHero.jsx";
 
 
 const Heroes = () => {
-
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     return (
         <>
             <Header active={'heroes'}/>

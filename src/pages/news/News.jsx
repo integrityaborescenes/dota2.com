@@ -9,7 +9,7 @@ import {useState} from "react";
 
 const News = () => {
     const [whatTab, setWhatTab] = useState('news')
-
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     return (
         <>
             <Header active={'news'}/>

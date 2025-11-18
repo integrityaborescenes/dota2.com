@@ -8,6 +8,7 @@ import AtTheEndJoinTheBattle from "@/components/AtTheEndJoinTheBattle/AtTheEndJo
 import Footer from "@/components/Footer/Footer.jsx";
 
 const Home = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     return (
         <>
             <Header />

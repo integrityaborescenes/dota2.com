@@ -1,9 +1,8 @@
 import styles from './NewsBlock.module.scss'
 
-const NewsBlock = ({newsImage,newsDate,newsTitle,newsText,smallBlock, onClick}) => {
+const NewsBlock = ({newsImage,newsDate,newsTitle,newsText,smallBlock}) => {
     return (
         <div
-            onClick={onClick}
             className={`
         ${styles.newsBlock}
         ${smallBlock === true ? styles.smallBlock : false}
