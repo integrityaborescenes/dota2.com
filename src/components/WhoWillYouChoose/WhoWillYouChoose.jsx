@@ -6,8 +6,6 @@ import {heroes} from './heroesData1.js'
 import {useEffect, useState} from "react";
 import {heroes2} from "./heroesData2.js";
 import {heroes3} from "./heroesData3.js";
-import {BASE_URL} from "@/routing/index.js";
-import RouterLink from "@/routing/RouterLink.jsx";
 
 const WhoWillYouChoose = () => {
 
@@ -26,10 +24,9 @@ const WhoWillYouChoose = () => {
 
 return (
         <div className={styles.whoWillYouChoose}>
-            <div className={styles.whoWillYouChooseContainer}>
-                <RouterLink to={`${BASE_URL}heroes`} aria-label="News page">
-                    <BigBlockWText startAnim={isUserOnBlock ? 'start' : ''} textP={data.textP} hSpanText={data.hSpanText} hText={data.hText} buttonText={data.buttonText}/>
-                </RouterLink>
+            <div className={styles.whoWillYouChooseContainer} on
+            >
+                    <BigBlockWText startAnim={isUserOnBlock ? 'start' : ''} textP={data.textP} hSpanText={data.hSpanText} hText={data.hText} buttonText={data.buttonText} to={'heroes'}/>
             </div>
             <div className={styles.heroSlider}>
                 <div className={styles.heroRow}>
