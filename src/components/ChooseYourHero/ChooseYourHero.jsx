@@ -94,8 +94,20 @@ const ChooseYourHero = () => {
                                     />
                                 ))
                         }
-                        { isSortByComplexity > 0 &&
+                        { isSortByComplexity > 0 && isSortByAttribute === '' &&
                             allHeroesData.filter((x) => x.complexity === isSortByComplexity)
+                                .map((heroInfo) => (
+                                    <HeroesSlider key={heroInfo.heroName}
+                                                  heroAttribute={heroInfo.heroAttribute}
+                                                  heroImg={heroInfo.heroImg}
+                                                  heroName={heroInfo.heroName}
+                                                  allHeroesBlock={true}
+                                                  animChangePos={true}
+                                    />
+                                ))
+                        }
+                        { isSortByComplexity > 0 && isSortByAttribute !== '' &&
+                            allHeroesData.filter((x) => x.complexity === isSortByComplexity && x.heroAttribute === isSortByAttribute)
                                 .map((heroInfo) => (
                                     <HeroesSlider key={heroInfo.heroName}
                                                   heroAttribute={heroInfo.heroAttribute}
