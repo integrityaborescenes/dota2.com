@@ -24,7 +24,7 @@ const WhoWillYouChoose = () => {
 
 return (
         <div className={styles.whoWillYouChoose}>
-            <div className={styles.whoWillYouChooseContainer} on
+            <div className={styles.whoWillYouChooseContainer}
             >
                     <BigBlockWText startAnim={isUserOnBlock ? 'start' : ''} textP={data.textP} hSpanText={data.hSpanText} hText={data.hText} buttonText={data.buttonText} to={'heroes'}/>
             </div>

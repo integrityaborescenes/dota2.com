@@ -1,5 +1,5 @@
 import styles from './NewsAndUpdates.module.scss'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const NewsAndUpdates = ({active, onChange}) => {
     const [isClicked, setIsClicked] = useState('news')

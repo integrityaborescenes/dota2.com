@@ -3,8 +3,7 @@ import arrowLeft from "@/assets/images/arrow_left.png";
 import {newsData} from "@/components/LatestNews/newsData.js";
 import NewsBlock from "@/components/LatestNews/NewsBlock/NewsBlock.jsx";
 import BackgroundBody from "@/components/BackgroundBody/BackgroundBody.jsx";
-import {BASE_URL} from "@/routing/index.js";
-import RouterLink from "@/routing/RouterLink.jsx";
+import {Link} from "react-router";
 
 const SelectedNews = ({newsInfo}) => {
 
@@ -18,9 +17,9 @@ const SelectedNews = ({newsInfo}) => {
                 `}>
                     <div className={styles.backToNews}>
                         <img className={styles.arrowLeft} src={arrowLeft} loading="lazy"/>
-                        <RouterLink to={`${BASE_URL}news`} aria-label="News page">
+                        <Link to="/news" >
                             <p>Back to news</p>
-                        </RouterLink>
+                        </Link>
                     </div>
                     <div className={styles.postInfo}>
                         <h2>{newsInfo.newsTitle}</h2>
@@ -40,13 +39,13 @@ const SelectedNews = ({newsInfo}) => {
                     <p className={styles.pText}>Latest news</p>
                     <div className={styles.newsRow}>
                         {newsData.filter((x) => x.id !== newsInfo?.id).slice(0,3).map((x) => (
-                            <RouterLink
-                                to={`${BASE_URL}news/${x.id}`}
-                                aria-label="Specific news"
+                            <Link
+                                to={`/news/${x.id}`}
+                                state={x}
                             >
                                 <NewsBlock
                                     newsImage={x.newsImage} newsTitle={x.newsTitle} newsText={x.newsText} newsDate={x.newsDate} key={x.newsTitle}/>
-                            </RouterLink>
+                            </Link>
                         ))}
                     </div>
                 </div>

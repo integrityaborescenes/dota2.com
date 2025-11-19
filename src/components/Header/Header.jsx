@@ -1,16 +1,15 @@
 import {languages} from "@/components/Header/languageData.js";
 import styles from './Header.module.scss'
-import RouterLink from "@/routing/RouterLink.jsx";
-import {BASE_URL} from "@/routing/index.js";
+import {Link} from "react-router";
 
 const Header = ({active}) => {
 
     return (
         <div className={styles.header}>
             <div className={styles.headerLeft}>
-                <RouterLink to={`${BASE_URL}`} aria-label="Home page">
+                <Link to="/">
                     <div className={styles.header__logo}></div>
-                </RouterLink>
+                </Link>
                 <div className={styles.nav__game}>
                     <p>Game</p>
                     <div className={styles.arrowDownGame}></div>
@@ -21,24 +20,22 @@ const Header = ({active}) => {
                     </div>
                 </div>
                 <ul className={styles.header__nav}>
-                    <RouterLink to={`${BASE_URL}heroes`} aria-label="News page">
+                    <Link to="/heroes">
                         <li className={`
                             ${styles.nav_other}
                             ${active === 'heroes' ? styles.active : null}
                             `}>Heroes</li>
-                    </RouterLink>
-                    <RouterLink to={`${BASE_URL}news`} aria-label="News page">
+                    </Link>
+                    <Link to="/news">
                             <li className={`
                         ${styles.nav_other}
                         ${active === 'news' ? styles.active : null}
                         `}>News</li>
-                    </RouterLink>
-                    <RouterLink to={`${BASE_URL}esports`} aria-label="News page">
+                     </Link>
                     <li className={`
                         ${styles.nav_other}
                         ${active === 'esports' ? styles.active : null}
                         `}>Esports</li>
-                    </RouterLink>
                 </ul>
             </div>
             <div className={styles.headerRight}>

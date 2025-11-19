@@ -5,11 +5,16 @@ import NewsAndUpdates from "@/components/NewsAndUpdates/NewsAndUpdates.jsx";
 import AllNewsBlock from "@/components/AllNewsBlock/AllNewsBlock.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
 import UpdatesBlock from "@/components/UpdatesBlock/UpdatesBlock.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {Outlet} from "react-router";
 
 const News = () => {
     const [whatTab, setWhatTab] = useState('news')
     window.scrollTo({ top: 0, behavior: 'smooth' })
+
+    useEffect(() => {
+        document.title = 'Dota 2 News'
+    }, []);
     return (
         <>
             <Header active={'news'}/>
@@ -21,6 +26,7 @@ const News = () => {
                 {whatTab === 'updates' && <UpdatesBlock />}
             </main>
             <Footer />
+            <Outlet />
         </>
     )
 }

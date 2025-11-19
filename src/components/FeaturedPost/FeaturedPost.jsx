@@ -1,9 +1,7 @@
 import {newsData} from '@/components/LatestNews/newsData.js'
 import styles from './FeaturedPost.module.scss'
-import arrowLeft from "@/assets/images/arrow_left.png";
-import {BASE_URL} from "@/routing/index.js";
-import RouterLink from "@/routing/RouterLink.jsx";
-
+import {Link} from "react-router";
+import arrowLeft from '@/assets/images/arrow_left.png'
 const FeaturedPost = () => {
     return (
         <div className={styles.featuredPost}>
@@ -14,12 +12,12 @@ const FeaturedPost = () => {
                 </div>
                 {newsData.filter((x,i)=> i<1).map((x)=> <h3 key={x.newsTitle}>{x.newsTitle}</h3>)}
                 <div className={styles.readMore}>
-                    <RouterLink
-                        to={`${BASE_URL}news/${newsData[0].id}`}
-                        aria-label="Specific news"
+                    <Link
+                        to={`/news/${newsData[0].id}`}
+                        state={newsData[0]}
                     >
                         <p>Read more</p>
-                    </RouterLink>
+                    </Link>
                     <img className={styles.arrowRight} src={arrowLeft} loading="lazy"/>
                 </div>
             </div>

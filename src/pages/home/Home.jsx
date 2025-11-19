@@ -6,9 +6,13 @@ import JoinTheBattle from "@/components/JoinTheBattleBlock/JoinTheBattle.jsx";
 import WhoWillYouChoose from "@/components/WhoWillYouChoose/WhoWillYouChoose.jsx";
 import AtTheEndJoinTheBattle from "@/components/AtTheEndJoinTheBattle/AtTheEndJoinTheBattle.jsx";
 import Footer from "@/components/Footer/Footer.jsx";
+import {useEffect} from "react";
 
 const Home = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+    useEffect(() => {
+        document.title = 'Dota 2'
+    }, []);
     return (
         <>
             <Header />
